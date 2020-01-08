@@ -1,0 +1,360 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Livvic', sans-serif;";
+}
+
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top {
+	height: 250px;
+	width: 100%;
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	background-size: cover;
+}
+
+.display-top {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+	
+}
+
+.display-top--title,
+.budget_month {
+	font-size: 20px;
+}
+
+.budget-value {
+	font-size: 30px;
+}
+
+.budget-box-income {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-radius: 3px;
+	color: black;
+	background-color: #ccffeb;
+}
+
+.budget-box-expenses {
+	padding: 10px;
+	border-radius: 3px;
+	color: black;
+	background-color: #ffe6e6;
+}
+
+
+
+
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+.budget-box-income--percet,
+.budget-box-expenses--percet {
+	float: left;
+    width: 35px;
+    font-size: 14px;
+    padding: 3px 0;
+    margin-left: 10px;
+}
+
+.budget-box-expensespercet {
+	border-radius: 3px;
+	background-color: rgb(217, 217, 217, 0.6);
+	text-align: center;
+}
+
+/**********************************************
+****Middle part
+**********************************************/
+.reset-inc {
+	border: none;
+	background-color: white;
+	color:  #70dbdb;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.reset-exp {
+	border: none;
+	background-color: white;
+	color:  #ff6666;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
+.reset-inc--btn,
+.reset-exp--btn {
+	margin-left: 5px;
+}
+
+.rotate {
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate (360deg);
+}
+
+@keyframes animatedDeleteIcon {
+	0% {transform: rotate(0deg);left:0px; color: red;}
+    25% {transform: rotate(180deg);left:25px; color: #ffcc00;}
+    50% {transform: rotate(360deg);left:50px; color: #00cc00;}
+    75% {transform: rotate(-180deg);left:25px; color: #ffcc00;}
+    100% {transform: rotate(-360deg);left:0px; color: #ffb3b3;}
+}
+
+.animatedIcon {
+	background-color: #f2f2f2;
+	animation-name: animatedDeleteIcon;
+	animation-duration: 3s;
+}
+
+@keyframes animatedDeleteBtn {
+	0% {color: red;}
+    25% {color: #ffcc00;}
+    50% {color: #00cc00;}
+    75% {color: #ffcc00;}
+    100% {color: #ffb3b3;}
+}
+
+.animatedDelBtn {
+	background-color: #f2f2f2;
+	animation-name: animatedDeleteBtn;
+	animation-duration: 3s; 
+}
+
+
+.reset-inc:focus,
+.reset-exp:focus {
+	outline: none;
+}
+
+.delete {
+	border: none;
+	background-color: #f2f2f2;
+	color: red;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 50px;
+	cursor: pointer;
+}
+
+.delete--btn {
+	position: relative;
+	margin-left: 5px;
+}
+
+.delete:focus {
+	outline: none;
+}
+.middle-box {
+	padding: 10px;
+	border: 1px solid #d9d9d9;
+	background-color: #f2f2f2; 
+}
+
+.middle-box .window {
+	margin: 0px auto;
+	text-align: center;
+}
+
+ .type {
+	width: 50px;
+	height: 40px;
+	font-size: 15px;
+	border: 0.5px solid  #e7e7e7;
+	border-radius: 5px;
+	vertical-align: middle;
+}
+
+.input-description,
+.input-value {
+	width: 350px;
+	height: 40px;
+	font-size: 15px;
+	border: 0.5px solid  #e7e7e7;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.input-value {width: 100px;}
+.check-btn {
+	font-size: 35px;
+	background-color: #f2f2f2;
+	border: none;
+	color: #70dbdb;
+	vertical-align: middle;
+	cursor: pointer;
+    display: inline-block;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.check-btn:active,
+.reset-inc:active,
+.reset-exp:active,
+.delete:active {
+	transform: translateY(2px);
+}
+
+.check-btn:focus{outline: none}
+.type:focus,
+.input-description:focus,
+.input-value:focus {
+    outline: none;
+    border: 2px solid #28B9B5;
+}
+
+.add__btn:focus { outline: none; }
+
+/*
+.operation:focus {
+	border: 2px solid red;
+}
+*/
+.container {
+	margin: 60px auto;
+	width: 1000px;
+}
+
+.expenses-container {
+	float: left;
+	width: 475px;
+}
+
+.incomes-container {
+	float: left;
+	width: 475px;
+	margin-right: 50px;
+}
+
+/**********************************************
+****Bottom part
+**********************************************/
+.incomes-container__title { 
+	text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+	color: #70dbdb;
+
+}
+.expenses-container__title {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #ff6666;
+}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.item__description {
+    float: left;
+    color: black;
+}
+
+.item__value {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 13px;
+    background-color: #FFDAD9;
+    color: black;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.incomes-container .item__value,
+.incomes-container .item__delete--btn {
+    color: #70dbdb;
+}
+
+
+.expenses-container .item__value,
+.expenses-container .item__delete--btn {
+    color: #ff6666;
+}
+
+
+.item__delete {
+    float: left;
+}
+
+.item__delete--btn {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    display: none;
+}
+
+.item__delete--btn:focus { outline: none; }
+.item__delete--btn:active { transform: translateY(2px); }
+
+.item:hover .item__delete--btn { display: inline-block; }
+.item:hover .item__value { transform: translateX(-20px); }
+.item:hover .item__percentage { transform: translateX(-20px); }
+
+
+.red { color: #ff6666 !important; }
+.red-focus:focus { border: 2px solid #ff6666 !important; }
+
+
+.unpaid {
+    background-color: #FFDAD9 !important;
+    cursor: pointer;
+    color: #FF5049;
+
+}
+
+.unpaid .item__percentage { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+.unpaid:hover .item__description { font-weight: 900; }
+
+

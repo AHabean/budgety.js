@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" lang="en">
+	<title>Budget</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' rel="stylesheet">
+</head>
+<body>
+	<div class="appDelete">
+		<div class="top">
+			<div class="display-top">
+				<div>
+					<h4 class="display-top--title">Available Budget in
+						<span class="budget_month"> %Month%:</span>
+					</h4>
+				    <h1 class="budget-value">+ 0,000.00</h1>
+			    </div>
+			    <div class="budget-box-income clearfix">
+				    <h4 class="left">Incomes</h4>
+				    <div class="right">
+				    	<h3 class="left budget-box-income--value">+ 4,300.00</h3>
+				        <h4 class="budget-box-income--percet">&nbsp;</h4>
+				    </div>
+			    </div>
+			    <div class="budget-box-expenses clearfix">
+				    <h4 class="left">Expenses</h4>
+				    <div class="right clearfix">
+				    	<h3 class="left budget-box-expenses--value">- 2,300.00</h3>
+				        <h4 class="budget-box-expenses--percet">45%</h4>
+				    </div>				    
+			    </div>
+			</div>
+		</div>
+
+		<div  class = "middle-box">
+			<div class="window">
+				<select class="type">
+					<option value="inc" selected>+</option>
+					<option value="exp">-</option>
+				</select>
+				<input class="input-description" type="text" name="Description" placeholder="Add an description here!">
+				<input class="input-value" type="number" name="Value" placeholder="Value">
+				<button class="check-btn">
+					<i class="far fa-check-circle"></i>
+				</button>
+				<button class="delete" id="animBtn">Delete all
+					<div class="far fa-trash-alt delete--btn" id="deleteIcon"></div>
+				</button>
+			</div>
+		</div>
+
+		<div class="container clearfix">
+			<div class="incomes-container">
+				<div class="incomes-container__title"><u>Incomes</u>
+					<button class="reset-inc">Reset
+						<div class="fas fa-redo reset-inc--btn" id="btnInc"></div>
+					</button>
+				
+				</div>
+				<div class="income__list">
+                    <!--
+                        <div class="item clearfix" id="income-0">
+                            <div class="item__description">Salary</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 2,100.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn">
+                                        <i class="far fa-times-circle"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                     -->
+                </div>
+
+			</div>
+			<div class="expenses-container">
+				<div class="expenses-container__title"><u>Expenses</u>
+					<button class="reset-exp" >Reset
+						<div class="fas fa-redo reset-exp--btn" id="btnExp"></div>
+				    </button>
+				
+				</div>
+				<div class="expenses__list">
+                    <!--
+                        <div class="item clearfix" id="expenses-0">
+                            <div class="item__description">Salary</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 2,100.00</div>
+                                <div class="item__percentage">21%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="far fa-times-circle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                     -->
+                </div>
+			</div>			
+		</div>
+	</div>
+
+	
+
+</body>
+ 
+<script type="text/javascript" src="modulesRestored.js"></script>
+
+</html>
